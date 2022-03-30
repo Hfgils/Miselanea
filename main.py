@@ -18,7 +18,7 @@ la opción de su prefiera:
 """
 
 menuo = """
-Bienvenidos a la micelanea de Pyton,a continuación selecione 
+Bienvenidos a la micelanea de operadores Pyton,a continuación selecione 
 la opción de su prefiera:
 [1] área de un triángulo.
 [2] Suma de dos números.
@@ -33,7 +33,7 @@ la opción de su prefiera:
 """
 
 menuc = """
-Bienvenidos a la micelanea de Pyton,a continuación selecione 
+Bienvenidos a la micelanea de condicionales en Pyton,a continuación selecione 
 la opción de su prefiera:
 [1] saber si el número ingresado por teclado es positivo o negativo.
 [2] Evaluar  dos números y diga cuál es el mayor y cuál el menor.
@@ -50,18 +50,19 @@ la opción de su prefiera:
 """
 
 menuci = """
-Bienvenidos a la micelanea de Pyton,a continuación selecione 
+Bienvenidos a la micelanea ciclos en Pyton,a continuación selecione 
+
 la opción de su prefiera:
-[1] saber si el número ingresado por teclado es positivo o negativo.
-[2] Evaluar  dos números y diga cuál es el mayor y cuál el menor.
-[3] Ingrese tres números enteros positivos y que calcule e imprima en
-    pantalla el menor y el mayor de ellos.
-[4] Dados dos números A y B, sumarlos si A es menor que B o sino restarlos.
-[5] Calculo del área y del perímetro de un cuadrado.
-[6] Calcular el área y el volúmen de un cilindro.
-[7] Ingrese dos números , sumarlos si al menos uno de ellos es negativo, en caso contrario
-    multiplicarlos.
-[8] Calcular el promedio de tres (3) números .
+
+[1] Imprimir todos los múltiplos de 3 que hay entre 1 y 100.
+[2] Imprimir los números impares entre 0 y 100.
+[3] Imprimir los números pares del 1 al 100.
+[4] Escribir un programa que imprima por pantalla los cuadrados de los números del 1 al 30.
+[5] Escribir un programa que sume los cuadrados de los cien primeros números naturales,
+    mostrando el resultado en pantalla.
+[6] Dados dos números naturales, el primero menor que el segundo, generar y mostrar todos los
+    números comprendidos entre ellos en secuencia ascendente..
+[7] Sumar todos los números que se digitan por teclado mientras no sea cero.
 [9] Regresar.
 [99] Salir.
 """
