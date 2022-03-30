@@ -138,15 +138,27 @@ class Miselanea:
             if (x%2!=0):
                 print(str(x))
 
+
     @staticmethod
     def cuadrados30() -> object:
         j: int
+        i = 1
+        while i < 31:
+            j = (i ** 2)
+            print("{}: {}".format(i,j))
+            i += 1
+
+    @staticmethod
+    def sumacuadrados100() -> object:
+        j: int
+        i = 1
+        while i < 100:
+            j = (i ** 2)
+            print("{}: {}".format(i,j))
+            i += 1
 
 
-        for x in range(5):
-            x += 1
-            j=(x**2)
-            print(str(j))
+
 
 
 

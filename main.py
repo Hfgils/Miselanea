@@ -1,24 +1,25 @@
 import os
 import string
+import time
+
 
 import Miselanea
-
+flagM: bool
 mise = Miselanea.Miselanea
 var: string
+
 menup = """
 Bienvenidos a la micelanea de Pyton,a continuación selecione 
 la opción de su prefiera:
-
 [1] Operadores 
 [2] Condicionales
 [3] Ciclos 
-[3] Salir
+[99] Salir
 """
 
 menuo = """
 Bienvenidos a la micelanea de Pyton,a continuación selecione 
 la opción de su prefiera:
-
 [1] área de un triángulo.
 [2] Suma de dos números.
 [3] calcular el cuadrado de un número.
@@ -27,13 +28,13 @@ la opción de su prefiera:
 [6] Calcular el área y el volúmen de un cilindro.
 [7] Calcular longitud el área de un circulo.
 [8] Calcular el promedio de tres (3) números .
+[9] Regresar.
 [99] Salir.
 """
 
 menuc = """
 Bienvenidos a la micelanea de Pyton,a continuación selecione 
 la opción de su prefiera:
-
 [1] saber si el número ingresado por teclado es positivo o negativo.
 [2] Evaluar  dos números y diga cuál es el mayor y cuál el menor.
 [3] Ingrese tres números enteros positivos y que calcule e imprima en
@@ -44,15 +45,25 @@ la opción de su prefiera:
 [7] Ingrese dos números , sumarlos si al menos uno de ellos es negativo, en caso contrario
     multiplicarlos.
 [8] Calcular el promedio de tres (3) números .
+[9] Regresar.
 [99] Salir.
 """
 
 menuci = """
 Bienvenidos a la micelanea de Pyton,a continuación selecione 
 la opción de su prefiera:
-[1] Operadores 
-[2] Condicionales
-[3] Ciclos 
+[1] saber si el número ingresado por teclado es positivo o negativo.
+[2] Evaluar  dos números y diga cuál es el mayor y cuál el menor.
+[3] Ingrese tres números enteros positivos y que calcule e imprima en
+    pantalla el menor y el mayor de ellos.
+[4] Dados dos números A y B, sumarlos si A es menor que B o sino restarlos.
+[5] Calculo del área y del perímetro de un cuadrado.
+[6] Calcular el área y el volúmen de un cilindro.
+[7] Ingrese dos números , sumarlos si al menos uno de ellos es negativo, en caso contrario
+    multiplicarlos.
+[8] Calcular el promedio de tres (3) números .
+[9] Regresar.
+[99] Salir.
 """
 
 
@@ -157,12 +168,15 @@ def operadores() -> object:
                 if op == 1:
                     flag = 1
             operadores()
+        elif opcion == 9:
+            pmenu(var)
         elif opcion == 99:
-            break
+            print('Gracias por usar nuestros servicios hasta luego')
+            exit()
         else:
             print('Por favor digite una opcion correcta')
-            os.system("cls")
-            pmenu(var)
+            time.sleep(2)
+            operadores()
 
 
 def condicionales():
@@ -266,12 +280,15 @@ def condicionales():
                 if op == 1:
                     flag = 1
             condicionales()
+        elif opcion == 9:
+            pmenu(var)
         elif opcion == 99:
-            break
+            print('Gracias por usar nuestros servicios hasta luego')
+            exit()
         else:
             print('Por favor digite una opcion correcta')
-            os.system("cls")
-            pmenu(var)
+            time.sleep(2)
+            condicionales()
 
 def ciclos():
     os.system("cls")
@@ -330,7 +347,7 @@ def ciclos():
                 op = int(input("Desea regresar al menu anterior 1(SI) 2(NO): "))
                 if op == 1:
                     flag = 1
-            condicionales()
+            ciclos()
 
         elif opcion == 6:
             flag: int = 2
@@ -343,7 +360,7 @@ def ciclos():
                 op = int(input("Desea regresar al menu anterior 1(SI) 2(NO): "))
                 if op == 1:
                     flag = 1
-            condicionales()
+            ciclos()
         elif opcion == 7:
             flag: int = 2
             op: int
@@ -354,7 +371,7 @@ def ciclos():
                 op = int(input("Desea regresar al menu anterior 1(SI) 2(NO): "))
                 if op == 1:
                     flag = 1
-            condicionales()
+            ciclos()
         elif opcion == 8:
             flag: int = 2
             op: int
@@ -367,17 +384,21 @@ def ciclos():
                 op = int(input("Desea regresar al menu anterior 1(SI) 2(NO): "))
                 if op == 1:
                     flag = 1
-            condicionales()
+            ciclos()
+        elif opcion == 9:
+            pmenu(var)
         elif opcion == 99:
-            break
+            print('Gracias por usar nuestros servicios hasta luego')
+            exit()
         else:
             print('Por favor digite una opcion correcta')
-            os.system("cls")
-            pmenu(var)
+            time.sleep(2)
+            ciclos()
 
 
 
 def pmenu(var):
+    flagM = True
     os.system('cls')
     print(menup)
     opcion = int(input("Introduce la opcion: "))
@@ -390,11 +411,14 @@ def pmenu(var):
         elif opcion == 3:
             ciclos()
         elif opcion == 99:
-            break
+            print('Gracias por usar nuestros servicios hasta luego')
+            exit()
         else:
+
             print('Por favor digite una opcion correcta')
+            time.sleep(2)
             os.system("cls")
-            pmenu(var)
+            pmenu("cls")
 
 
 if __name__ == '__main__':
